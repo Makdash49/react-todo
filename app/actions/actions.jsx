@@ -57,7 +57,7 @@ export var startAddTodos = () => {
     var todosObject = {};
     var keysArray = [];
 
-    ref.on("value", function(snapshot) {
+    ref.once("value", function(snapshot) {
       var newObjectsArray = []
       todosObject = snapshot.val();
       keysArray = Object.keys(snapshot.val());
